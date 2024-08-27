@@ -1,22 +1,15 @@
-var nome = "Victor";
+let pessoa = {
+    nome: "Linek Reis",
+    idade: 22,
+    cargo: "CEO",
+};
 
-// muda a qualquer momento
-if (nome === "Victor") {
-    var profissao = "professor";
-    console.log(profissao);
+let usuarios = [
+    { nome: "Victor", idade: 23, cargo: "Dev" },
+    { nome: "Felipe", idade: 23, cargo: "Dev" },
+    { nome: "Linek Reis", idade: 22, cargo: "King"},
+];
+
+for (let i = 0; i < usuarios.length; i++) {
+    console.log(usuarios[i].nome);
 }
-
-// muda apenas no escopo
-if (nome === "Vicotr") {
-    let cargo = "CEO";
-    console.log(cargo);
-}
-
-// Não muda em nenhum momento
-if (nome === "Victor") {
-    const cargos = "CEOs";
-    // cargo += "Professor"
-    console.log(cargos);
-}
-
-const sobrenome = "Sobrenome";
