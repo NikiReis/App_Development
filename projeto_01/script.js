@@ -1,21 +1,22 @@
-function imprimir(){
-    document.write("<p>Counter</p>");
+var nome = "Victor";
+
+// muda a qualquer momento
+if (nome === "Victor") {
+    var profissao = "professor";
+    console.log(profissao);
 }
 
-// setInterval(imprimir, 1000);
+// muda apenas no escopo
+if (nome === "Vicotr") {
+    let cargo = "CEO";
+    console.log(cargo);
+}
 
-// setInterval(()=>{
-//     document.write("<p>Counter</p>");
-// },1000);
+// Não muda em nenhum momento
+if (nome === "Victor") {
+    const cargos = "CEOs";
+    // cargo += "Professor"
+    console.log(cargos);
+}
 
-// let counter = document.getElementById("contador");
-
-// var myTimer = setInterval(()=>{counter.innerHTML = "Hello </br>"},1000);
-// function stopTimer(){
-//     clearInterval(myTimer)
-// }
-
-setTimeout(imprimir,4000)
-setTimeout(()=>{
-
-},4000)
+const sobrenome = "Sobrenome";
