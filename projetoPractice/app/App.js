@@ -1,26 +1,22 @@
-import {View, Text, } from 'react-native';
+import {View, Text, Button} from 'react-native';
+import { useState } from 'react';
 
 function App(){
+    const [name, setName] = useState('');
+    const [age, SetAge] = useState(22)
+    function catchNameAGe(name,age){
+        setName(name)
+        SetAge(age)
+    }
+
+
     return (
         <View style={{marginTop: 50}}>
-            <Header/>
-            <LogoImage/>
+            <Text style={{fontSize: 25}}>{name}</Text>
+            <Button title='save'
+            onPress={() => catchNameAGe("Linek Reis", 22)}/>
         </View>
     )
 }
+
 export default App
-
-function Header(){
-    let name = "Linek Reis"
-    return <Text style={{fontSize: 24, padding: 16}}>{name}</Text>
-}
-
-function LogoImage(){
-    let img = "https://pt.wikipedia.org/wiki/Lotus_98T"
-    return (
-        <Image
-            source={{uri: img}}
-            style={{width: '100%', height: 300}}
-        />
-    );
-}
